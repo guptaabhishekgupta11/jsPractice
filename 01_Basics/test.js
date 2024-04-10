@@ -6,3 +6,5 @@ var state="Telangana"
 
 //console.table() expects an array or an object as its parameter, not separate variables
 console.table([city,mobile,state])
+
+
