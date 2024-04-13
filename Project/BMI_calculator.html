@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submit{
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+span {
+    color: #007bff;
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>BMI calculator</h1>
+    <form>
+        <label for="height">Height</label>
+        <input type="number" name="height" id="height">
+        <label for="weight">Weight</label>
+        <input type="number" name="weight" id="weight">
+       <button id="submit">Submit</button>
+        <p><span id="result"></span></p>
+    </form>
+</body>
+<script>
+    // function calculate() {
+    //     event.preventDefault();
+    //     const height = document.getElementById("height");
+    //     const weight = document.getElementById("weight");
+    //     const heightValue = height.value;
+    //     const weightValue = weight.value;
+    //     const bmi = [weightValue / (heightValue * heightValue)]*10000;
+    //     const result = document.getElementById("result");
+    //     result.innerHTML = bmi;
+
+    // }
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const height = parseFloat(document.querySelector('#height').value);
+        const weight = parseFloat(document.querySelector('#weight').value);
+        const result = document.querySelector('#result');
+
+        if (isNaN(height) || height <= 0 || isNaN(weight) || weight <= 0) {
+            result.textContent = `Please provide valid values for height and weight`;
+        } else {
+            const bmi = (weight / (height * height / 10000)).toFixed(2);
+            result.textContent = `Your BMI is ${bmi}`;
+        }
+    })
+
+
+</script>
+
+</html>

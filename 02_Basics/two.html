@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bites</title>
+    <style>
+        .title{
+            color:red;
+        }
+       body{
+        background-color: rgb(73, 72, 72);
+        color: white;
+       }
+
+    </style>
+</head>
+<body>
+    <h1 id="title" class="title">Welcome to BitsAndBytes</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Dolorem amet porro reprehenderit fugiat animi.
+         Aliquid corporis fugiat nobis similique reiciendis dolorum, facere quaerat,
+          autem consectetur est quis cupiditate natus nihil iure expedita blanditiis,
+         molestias tempora. Explicabo accusantium quam nemo dolor?</p>
+</body>
+    <script>
+       const divele =document.createElement('div');
+       divele.className='main'
+       divele.setAttribute('title','genratedTitle')
+       divele.style.backgroundColor='blue'
+       divele.style.padding='20px'
+       const textNode=document.createTextNode('Dolorem amet porro reprehenderit fugiat animi.')
+       divele.appendChild(textNode)
+       document.body.appendChild(divele)
+
+    </script>
+</html>

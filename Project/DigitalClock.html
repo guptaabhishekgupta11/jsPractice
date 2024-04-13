@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        body {
+            background-color: rgb(60, 60, 60);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+        }
+
+        .clockarea {
+           
+            height: 70px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: coral;
+            max-width: 200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clockarea">
+        <p class="clock">
+            <span id="result"></span>
+        </p>
+    </div>
+</body>
+<script>
+    const clock=document.querySelector('#result')
+    setInterval(function(){
+        const date=new Date();
+        clock.innerHTML=date.toLocaleString();
+    },1000)
+</script>
+
+</html>

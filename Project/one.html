@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .colors{
+            display: flex;
+            flex-direction: row;
+
+        }
+        h1{
+            text-align: center;
+            color: aliceblue;
+        }
+        .red {
+            background-color: red;
+            padding: 50px;
+            width: 100px;
+            border: 3px solid black;
+            border-radius: 20px;
+            margin: auto
+        }
+
+        .blue {
+            background-color: blue;
+            padding: 50px;
+            width: 100px;
+            border-radius: 20px;
+            border: 3px solid rgb(0, 0, 0);
+            margin: auto;
+        }
+
+
+        .black {
+            background-color: black;
+            padding: 50px;
+            width: 100px;
+            border: 3px solid rgb(239, 234, 234);
+            border-radius: 20px;
+            margin: auto
+        }
+
+        .green {
+            background-color: green;
+            padding: 50px;
+            width: 100px;
+            border: 3px solid black;
+            border-radius: 20px;
+
+            margin: auto
+        }
+
+        body {
+            background-color: rgb(105, 105, 105);
+           
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pick any color to change the theme to same color: </h1>
+    <div class="colors">
+        <div class="red" onclick="pickcolor('red')"></div>
+        <div class="blue" onclick="pickcolor('blue')"></div>
+        <div class="green" onclick="pickcolor('green')"></div>
+        <div class="black" onclick="pickcolor('black')"></div>
+    </div>
+
+</body>
+<script>
+    function pickcolor(color) {
+        document.body.style.backgroundColor = color;
+    }
+</script>
+
+</html>

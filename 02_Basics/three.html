@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS controls</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h1>Coding languages</h1>
+    <ul class="langs">
+
+    </ul>
+    
+</body>
+<script>
+    function addlanguages(lang) {
+        const list=document.createElement('li');
+        list.innerHTML=`${lang}`;
+        document.querySelector('.langs').appendChild(list)
+    }
+    // addlanguages('Python');
+    // addlanguages('Java');
+    // addlanguages('C#');
+    // addlanguages('C++');
+    // addlanguages('C');
+    // addlanguages('JavaScript');
+
+    function addnewLangs(langs) {
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langs))
+        document.querySelector('.langs').appendChild(li)
+    }
+ addnewLangs('python')
+</script>
+</html>
